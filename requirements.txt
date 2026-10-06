@@ -1,0 +1,6 @@
+numpy
+xgboost
+joblib
+streamlit
+Pillow
+tensorflow
