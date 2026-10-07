@@ -4,3 +4,4 @@ joblib
 streamlit
 Pillow
 tensorflow
+scikit-learn
