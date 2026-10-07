@@ -1,51 +1,31 @@
-# Glaucoma Detection Using Deep Learning-Based Pretrained CNN Models and Ensemble Learning
+# 👁️ Glaucoma Detection Using Deep Learning and Ensemble Learning
+
+A deep learning-based research project for classifying retinal fundus images into **Glaucoma** and **Normal** categories.
+
+The system uses pretrained CNN models for feature extraction, XGBoost for classification, and a Logistic Regression ensemble model for the final prediction. A Streamlit web application provides an easy-to-use interface for uploading and analyzing fundus images.
 
 ## 📌 Project Overview
 
-Glaucoma is a serious eye disease that can lead to permanent vision loss if it is not detected early.
+Glaucoma is an eye disease that can lead to permanent vision loss if it is not detected and managed in time.
 
-This project uses Deep Learning and Machine Learning techniques to classify retinal fundus images into:
+This project explores the use of deep learning and ensemble machine learning techniques for automated glaucoma image classification.
 
-- Normal
-- Glaucoma
-
-The system extracts deep features using pretrained Convolutional Neural Network (CNN) models and uses XGBoost classifiers followed by an ensemble learning model for final prediction.
-
-## 🧠 Models Used
-
-### Pretrained CNN Models
-
-- ResNet50
-- DenseNet121
-- VGG16
-- InceptionV3
-
-The pretrained CNN models are used as feature extractors with ImageNet weights.
-
-### Machine Learning
-
-- XGBoost
-- Logistic Regression for ensemble learning
-
-## 🔬 Methodology
-
-The overall workflow is:
+The system follows this workflow:
 
 ```text
 Fundus Image
      ↓
 Image Preprocessing
      ↓
-Pretrained CNN Models
+CNN Feature Extraction
      ↓
-Deep Feature Extraction
+ResNet50 ────────┐
+DenseNet121 ─────┤
+VGG16 ───────────┤
+InceptionV3 ─────┘
      ↓
-XGBoost Classifiers
+XGBoost Models
      ↓
-Prediction Probabilities
+Logistic Regression Ensemble
      ↓
-Ensemble Learning
-     ↓
-Final Prediction
-     ↓
-Normal / Glaucoma
+Glaucoma / Normal
