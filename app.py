@@ -47,10 +47,10 @@ st.set_page_config(
 
 IMG_SIZE = (224, 224)
 
-# IMPORTANT:
-# Change this path according to your computer
-MODEL_DIR = r"D:\glaucoma6\xgb_models"
-
+MODEL_DIR = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "xgb_models"
+)
 
 # ============================================================
 # TITLE
@@ -339,13 +339,9 @@ def predict_image(img_array):
     # Normal = 1
 
     if final_prediction == 0:
-
-        label = "Glaucoma"
-
+        result = "Glaucoma"
     else:
-
-        label = "Normal"
-
+        result = "Normal"
 
     confidence = np.max(
         final_probabilities
